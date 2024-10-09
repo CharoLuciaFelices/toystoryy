@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curiosidades || Rincón Toy Story</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header id="header">
+    <div class="logo-menu">
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/logo.png" alt=""></a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="peliculas.html">Peliculas</a></li>
+            <li><a href="personajes.html">Personajes</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="titulo-principal">
+        <h1>Curiosidades</h1>
+    </div>
+    <section id="curiosidades">
+        <ul class="curiosidades">
+            <li><span>Primera película animada por completo en CGI: </span>Toy Story (1995) fue la primera película en la historia del cine completamente animada por computadora, marcando un antes y un después en la industria.
+            </li>
+            <li><span>El guion original era más oscuro:</span> La primera versión del guion tenía un tono mucho más cínico y oscuro, con un Woody más tiránico y abusivo. Pixar hizo cambios significativos para hacer a Woody más simpático.</li>
+            <li><span>El nombre original de Buzz Lightyear:</span> Al principio, Buzz Lightyear iba a llamarse “Lunar Larry”. Finalmente, fue renombrado en honor al astronauta Buzz Aldrin, el segundo hombre en caminar sobre la luna.
+            </li>
+            <li><span>Referencias a El resplandor:</span>En <span>Toy Story 3</span>, hay varias referencias a la película de terror El resplandor. Por ejemplo, el número de la cámara de seguridad en Sunnyside es 237, el mismo número que la habitación embrujada en la película.
+            </li>
+            <li><span>Los animadores crearon juguetes reales:</span> Para lograr movimientos realistas, Pixar construyó versiones físicas de algunos de los personajes, como Woody y Buzz, y estudió cómo se movían.
+            </li>
+            <li><span>El personaje de Sid está basado en un empleado de Pixar:</span> Sid, el niño destructor de juguetes, fue inspirado por un empleado de Pixar conocido por desmontar y modificar objetos en la oficina.
+            </li>
+            <li><span>El número “A113” aparece en todas las películas de Pixar:</span> Este es un guiño a un aula en el Instituto de las Artes de California donde muchos de los animadores de Pixar estudiaron. En *Toy Story, aparece en la matrícula del auto de la mamá de Andy.
+            </li>
+            <li><span>Tom Hanks grabó las líneas de Woody durante descansos: Tom Hanks grabó muchas de sus líneas para *Toy Story </span>durante los descansos de las filmaciones de sus otras películas, como <span>Philadelphia y Forrest Gump</span>.
+            </li>
+            <li><span>El villano original de *Toy Story 2 era diferente</span>  En las primeras etapas de desarrollo de *Toy Story 2, Stinky Pete (el prospector) no iba a ser el villano. En su lugar, un personaje llamado "El Jefe" iba a ocupar ese rol.
+            </li>
+            <li><span>Buzz Lightyear casi no tenía casco:</span>  En el diseño inicial, Buzz no tenía el icónico casco transparente. Pixar lo añadió cuando se dieron cuenta de que necesitaban algo que reforzara la idea de que era un juguete espacial.</li>
+        </ul>
+    </section>
+</main>
+<footer id="footer">
+    <p>&copy; 2024 Rincón Toy Story. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    let menuVisible = false;
+
+    menuToggle.addEventListener('click', () => {
+        if (!menuVisible) {
+            navMenu.style.left = '0'; // Muestra el menú
+            menuVisible = true;
+        } else {
+            navMenu.style.left = '-250px'; // Oculta el menú
+            menuVisible = false;
+        }
+    });
+
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
