@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    /*position: absolute;*/
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    background: #072E53;
+}
+
+
+/* Estilos para el menú */
+#nav-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculto fuera de la pantalla */
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    transition: left 0.4s ease; /* Animación suave */
+    z-index: 2;
+}
+
+#nav-menu ul {
+    list-style: none;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+#nav-menu ul li {
+    margin: 15px 0;
+}
+
+#nav-menu ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    /*position: fixed;*/
+    top: 20px;
+    left: 20px;
+    /*width: 20px;*/
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.menu-toggle > div {
+    width: 30px;
+    height: 4px;
+    background: #FFF;
+    margin: 5px 0;
+}
+
+.menu-toggle > div {
+    width: 30px;
+    height: 4px;
+    background: #FFFFFF;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Transformación al estado activo ("X") */
+.menu-toggle.active div:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/*home*/
+.titulo-principal {
+    background: #054553;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#peliculas h2 {
+    text-align: center;
+    margin-top: 20px ;
+}
+
+.peliculas, .personajes {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.peliculas > div, .personajes > div {
+    position: relative;
+    margin-bottom: 20px;
+    width: 49%;
+
+}
+
+.peliculas > div img, .personajes > div img {
+    width: 100%;
+}
+
+
+.peliculas > div h3, .personajes > div h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: clamp(20px, 4vw, 28px);
+}
+
+.peliculas > div a, .personajes > div a {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    background: #054553;
+    color: #FFFFFF;
+    padding: 10px 12px;
+    display: inline-block;
+    width: 120px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.peliculas > div a:hover, .personajes > div a:hover {
+    outline: #072E53 1px solid;
+    color: #072E53;
+    background: #FFFFFF;
+    transition: .5s;
+}
+
+#curiosidades {
+    margin: 50px 0;
+    padding: 10px;
+}
+
+.curiosidades li {
+    margin-bottom: 10px;
+}
+
+.curiosidades li span {
+    font-weight: 900;
+}
+
+#galeria {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 0;
+    margin: 20px auto;
+    width: 90%;
+}
+
+#galeria a {
+    width: 49%;
+}
+
+#galeria a img {
+    width: 100%;
+}
+
+#contacto {
+    padding: 30px 12px;
+    margin: 40px 0;
+}
+
+.contacto form > div {
+    margin-bottom: 10px;
+}
+
+.contacto form > div label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.contacto form > div input, textarea {
+    width: 100%;
+    padding: 5px 7px;
+    border: #054553 1px solid;
+}
+
+.contacto form > div textarea {
+    height: 150px;
+}
+
+.contacto form input[type=submit] {
+    background: #054553;
+    width: 120px;
+    border: none;
+    padding: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.img-contacto {
+    margin-top: 40px;
+}
+
+.img-contacto img {
+    width: 100%;
+}
+
+#publicidad {
+    display: flex;
+    justify-content: center;
+}
+
+#publicidad iframe {
+    width: 300px;
+    height: 600px;
+    object-fit: cover;
+    justify-content: center;
+}
+
+#footer {
+    background: #072E53;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 20px;
+}
+
+.ver-presentacion {
+    text-align: center;
+}
+
+.ver-presentacion a {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #FFFFFF;
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    #header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background: #072E53;
+    }
+
+    #nav-menu {
+        position: static;
+        left: 0;
+        width: 100%;
+        /*height: auto;*/
+        /*top: 5%;*/
+        background: none;
+
+    }
+
+    #nav-menu ul {
+        display: flex;
+        justify-content: end;
+        gap: 0 20px;
+        margin: auto;
+        /*width: 80%;*/
+        align-content: end;
+    }
+
+    #nav-menu ul li {
+        margin: 0;
+    }
+
+    #nav-menu ul li a {
+        border-bottom: 0;
+    }
+
+    .menu-toggle {
+        display: none; /* Ocultar el botón hamburguesa en pantallas grandes */
+    }
+
+    .peliculas {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #contacto {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #contacto > div {
+        width: 48%;
+    }
+
+    #publicidad iframe {
+        width: 728px;
+        height: 90px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .peliculas > div, .personajes > div, #galeria a {
+        width: 24%;
+    }
+
+    .curiosidades, #contacto {
+        width: 1200px;
+        margin: auto;
+    }
+
+    #galeria {
+        width: 1200px;
+    }
+
+    .img-contacto {
+        margin-top: 0;
+    }
+
+    .contacto form input[type=submit]:hover {
+        background: #FFFFFF;
+        color: #054553;
+        outline: #054553 1px solid;
+    }
+
+
+}
